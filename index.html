@@ -10,8 +10,11 @@
       name="viewport"
       content="width=device-width, initial-scale=1, user-scalable=no"
     />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <noscript><link rel="stylesheet" href="assets/css/noscript.css"/></noscript>
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <noscript
+      ><link rel="stylesheet" href="/assets/css/noscript.css"
+    /></noscript>
+    <link rel="stylesheet" href="/css/main.css" />
   </head>
   <body class="is-preload">
     <ul class="body_slides">
@@ -21,104 +24,6 @@
       <li></li>
     </ul>
 
-    <style>
-      .body_slides {
-        z-index: -2;
-
-        margin: 0;
-        padding: 0;
-
-        list-style: none;
-
-        background: #000;
-      }
-      .body_slides,
-      .body_slides:after {
-        position: fixed;
-        top: 0px;
-        left: 0px;
-
-        width: 100%;
-        height: 100%;
-      }
-      .body_slides:after {
-        content: "";
-
-        background: transparent url(images/pattern.png) repeat top left;
-      }
-
-      .body_slides li {
-        position: absolute;
-        top: 0;
-        left: 0;
-
-        width: 100%;
-        height: 100%;
-
-        -moz-animation: anim_slides 24s linear infinite 0s;
-        -ms-animation: anim_slides 24s linear infinite 0s;
-        -o-animation: anim_slides 24s linear infinite 0s;
-        animation: anim_slides 24s linear infinite 0s;
-
-        opacity: 0;
-        background-repeat: none;
-        background-size: cover;
-      }
-      .body_slides li:nth-child(1) {
-        background-image: url("/images/backgorunds/1.jpg");
-      }
-      .body_slides li:nth-child(2) {
-        animation-delay: 6s;
-
-        background-image: url("/images/backgorunds/2.jpg");
-      }
-      .body_slides li:nth-child(3) {
-        -moz-animation-delay: 12s;
-        animation-delay: 12s;
-
-        background-image: url("/images/backgorunds/3.jpg");
-      }
-      .body_slides li:nth-child(4) {
-        -moz-animation-delay: 18s;
-        animation-delay: 18s;
-
-        background-image: url("/images/backgorunds/4.jpg");
-      }
-      @keyframes anim_slides {
-        0% {
-          opacity: 0;
-        }
-        6% {
-          opacity: 1;
-        }
-        24% {
-          opacity: 1;
-        }
-        30% {
-          opacity: 0;
-        }
-        100% {
-          opacity: 0;
-        }
-      }
-      @-moz-keyframes anim_slides {
-        0% {
-          opacity: 0;
-        }
-        6% {
-          opacity: 1;
-        }
-        24% {
-          opacity: 1;
-        }
-        30% {
-          opacity: 0;
-        }
-        100% {
-          opacity: 0;
-        }
-      }
-    </style>
     <!-- Wrapper -->
     <div id="wrapper" style="background: rgba(0, 0, 0, .5)">
       <!-- Header -->
@@ -133,13 +38,13 @@
           <div class="inner">
             <p>Волчий глаз</p>
             <h1>
-              Проведение мероприятий с артистическим фехтованием
+              Мероприятия с артистическим фехтованием
             </h1>
           </div>
         </div>
         <nav>
           <ul>
-            <li><a href="#intro">Заказать</a></li>
+            <li><a href="#intro">Услуги</a></li>
             <li><a href="#work">О нас</a></li>
             <li><a href="#videos">Видео</a></li>
             <li><a href="#contact">Контакты</a></li>
@@ -152,10 +57,9 @@
       <div id="main">
         <!-- Intro -->
         <article id="intro">
-          <h2 class="major">Заказать</h2>
+          <h2 class="major">Услуги</h2>
           <span class="image main"><img src="images/pic01.jpg" alt=""/></span>
-          Заказать выступление вы можете по телефону (8-900-474-9-475),написав в
-          социальной сети «ВКонтакте» или написав по почте.<br />
+
           В наши услуги входит:
           <ul>
             <li>проведение праздников и корпоративов;</li>
@@ -175,21 +79,9 @@
         <article id="work">
           <h2 class="major">О нас</h2>
           <span class="image main"><img src="images/pic02.jpg" alt=""/></span>
+
           Организация «Волчий Глаз» занимается постановочными боями на заказ.
           Располагается по адресу ул. Электрозаводская дом 1.
-          <style>
-            .map > * {
-              width: 100%;
-              max-width: 100%;
-            }
-            .map {
-              display: flex;
-              justify-content: center;
-
-              width: 100%;
-              max-width: 100%;
-            }
-          </style>
           <div class="map">
             <script
               type="text/javascript"
@@ -198,42 +90,128 @@
               src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A8f6a2862414991bc79b1ba376ee0c90c0c2d468fcd9f1a121759136806bc26aa&amp;width=500&amp;height=400&amp;lang=ru_RU&amp;scroll=true"
             ></script>
           </div>
+          <div class="persons">
+            <div class="person">
+              <figure
+                style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; margin-top: 20px"
+              >
+                <img class="person__img" src="/images/photo/ruk.jpg" alt="" />
 
-          <figure
-            style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; margin-top: 20px"
-          >
-            <span class="image main"
-              ><img src="/images/photo/ruk.jpg" alt=""
-            /></span>
+                <figcaption class="person__caption">
+                  Руководитель клуба <br />Андрей Красильников.
+                </figcaption>
+              </figure>
+            </div>
+            <div class="person">
+              <figure
+                style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; margin-top: 20px"
+              >
+                <img class="person__img" src="/images/photo/ruk.jpg" alt="" />
 
-            <figcaption>
-              Руководитель клуба Андрей Красильников.
-            </figcaption>
-          </figure>
+                <figcaption class="person__caption">
+                  Руководитель клуба <br />Андрей Красильников.
+                </figcaption>
+              </figure>
+            </div>
+            <div class="person">
+              <figure
+                style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; margin-top: 20px"
+              >
+                <img class="person__img" src="/images/photo/ruk.jpg" alt="" />
+
+                <figcaption class="person__caption">
+                  Руководитель клуба <br />Андрей Красильников.
+                </figcaption>
+              </figure>
+            </div>
+          </div>
         </article>
 
         <!-- videos -->
         <article id="videos">
           <h2 class="major">Видео</h2>
-          <style>
-            .videos,
-            .videos * {
-              max-width: 100%;
-            }
-          </style>
           <div class="videos">
-            <video controls src="/videos/1.mp4"></video>
-            <video controls src="/videos/2.mp4"></video>
-            <video controls src="/videos/3.mp4"></video>
-            <video controls src="/videos/4.mp4"></video>
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/wW25_OSGeXs"
+              frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/QEufMMYYeT0"
+              frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/R0PBCJ5xzjU"
+              frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/0__hpHK48PY"
+              frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
           </div>
         </article>
 
         <!-- Contact -->
         <article id="contact">
-          <h2 class="major">Напишите нам</h2>
-          <a href="//vk.com/woleneye" target="blank">Мы «ВКонтакте»</a>
-          <form method="post" action="#">
+          <h2 class="major">Контакты</h2>
+          <ul>
+            <li>
+              Телефон:
+              <a href="tel:+79004749475">
+                8-900-474-94-75
+              </a>
+            </li>
+            <li>
+              Почта -
+              <a href="mailto:Kotovsky120690@yandex.ru">
+                Kotovsky120690@yandex.ru
+              </a>
+            </li>
+            <li>
+              <a
+                href="http://vk.com/wolfeneye"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Мы «ВКонтакте»
+              </a>
+            </li>
+          </ul>
+
+          <br />
+          <form method="post" action="/send.php">
+            <legend
+              class="major"
+              style="border-bottom: solid 1px #ffffff;
+    width: -moz-max-content;
+    width: -webkit-max-content;
+    width: -ms-max-content;
+    width: max-content;
+    padding-bottom: 0.5rem;
+    margin: 0 0 2rem 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    
+    letter-spacing: 0.5rem;
+    text-transform: uppercase;"
+            >
+              Напишите нам
+            </legend>
             <div class="fields">
               <div class="field half">
                 <label for="name">Ваше имя</label>
@@ -244,13 +222,18 @@
                 <input type="text" name="email" id="email" />
               </div>
               <div class="field">
-                <label for="message">Сообщение</label>
-                <textarea name="message" id="message" rows="4"></textarea>
+                <label for="msg">Сообщение</label>
+                <textarea
+                  name="msg"
+                  id="message"
+                  rows="4"
+                  style="max-width:100%; min-height: 3em; max-height: 30vh"
+                ></textarea>
               </div>
             </div>
             <ul class="actions">
               <li>
-                <input type="submit" value="Отправить" class="primary" />
+                <input type="submit" class="primary" />
               </li>
             </ul>
           </form>
@@ -276,249 +259,6 @@
               >
             </li>
           </ul> -->
-        </article>
-
-        <!-- Elements -->
-        <article id="elements">
-          <h2 class="major">Elements</h2>
-
-          <section>
-            <h3 class="major">Text</h3>
-            <p>
-              This is <b>bold</b> and this is <strong>strong</strong>. This is
-              <i>italic</i> and this is <em>emphasized</em>. This is
-              <sup>superscript</sup> text and this is <sub>subscript</sub> text.
-              This is <u>underlined</u> and this is code:
-              <code>for (;;) { ... }</code>. Finally,
-              <a href="#">this is a link</a>.
-            </p>
-            <hr />
-            <h2>Heading Level 2</h2>
-            <h3>Heading Level 3</h3>
-            <h4>Heading Level 4</h4>
-            <h5>Heading Level 5</h5>
-            <h6>Heading Level 6</h6>
-            <hr />
-            <h4>Blockquote</h4>
-            <blockquote>
-              Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis
-              sagittis eget tempus euismod. Vestibulum ante ipsum primis in
-              faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat
-              ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in
-              faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.
-            </blockquote>
-            <h4>Preformatted</h4>
-            <pre><code>i = 0;
-
-while (!deck.isInOrder()) {
-    print 'Iteration ' + i;
-    deck.shuffle();
-    i++;
-}
-
-print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
-          </section>
-
-          <section>
-            <h3 class="major">Lists</h3>
-
-            <h4>Unordered</h4>
-            <ul>
-              <li>Dolor pulvinar etiam.</li>
-              <li>Sagittis adipiscing.</li>
-              <li>Felis enim feugiat.</li>
-            </ul>
-
-            <h4>Alternate</h4>
-            <ul class="alt">
-              <li>Dolor pulvinar etiam.</li>
-              <li>Sagittis adipiscing.</li>
-              <li>Felis enim feugiat.</li>
-            </ul>
-
-            <h4>Ordered</h4>
-            <ol>
-              <li>Dolor pulvinar etiam.</li>
-              <li>Etiam vel felis viverra.</li>
-              <li>Felis enim feugiat.</li>
-              <li>Dolor pulvinar etiam.</li>
-              <li>Etiam vel felis lorem.</li>
-              <li>Felis enim et feugiat.</li>
-            </ol>
-            <h4>Icons</h4>
-            <ul class="icons">
-              <li>
-                <a href="#" class="icon fa-twitter"
-                  ><span class="label">Twitter</span></a
-                >
-              </li>
-              <li>
-                <a href="#" class="icon fa-facebook"
-                  ><span class="label">Facebook</span></a
-                >
-              </li>
-              <li>
-                <a href="#" class="icon fa-instagram"
-                  ><span class="label">Instagram</span></a
-                >
-              </li>
-              <li>
-                <a href="#" class="icon fa-github"
-                  ><span class="label">Github</span></a
-                >
-              </li>
-            </ul>
-
-            <h4>Actions</h4>
-            <ul class="actions">
-              <li><a href="#" class="button primary">Default</a></li>
-              <li><a href="#" class="button">Default</a></li>
-            </ul>
-            <ul class="actions stacked">
-              <li><a href="#" class="button primary">Default</a></li>
-              <li><a href="#" class="button">Default</a></li>
-            </ul>
-          </section>
-
-          <section>
-            <h3 class="major">Table</h3>
-            <h4>Default</h4>
-            <div class="table-wrapper">
-              <table>
-                <thead>
-                  <tr>
-                    <th>Name</th>
-                    <th>Description</th>
-                    <th>Price</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Item One</td>
-                    <td>Ante turpis integer aliquet porttitor.</td>
-                    <td>29.99</td>
-                  </tr>
-                  <tr>
-                    <td>Item Two</td>
-                    <td>Vis ac commodo adipiscing arcu aliquet.</td>
-                    <td>19.99</td>
-                  </tr>
-                  <tr>
-                    <td>Item Three</td>
-                    <td>Morbi faucibus arcu accumsan lorem.</td>
-                    <td>29.99</td>
-                  </tr>
-                  <tr>
-                    <td>Item Four</td>
-                    <td>Vitae integer tempus condimentum.</td>
-                    <td>19.99</td>
-                  </tr>
-                  <tr>
-                    <td>Item Five</td>
-                    <td>Ante turpis integer aliquet porttitor.</td>
-                    <td>29.99</td>
-                  </tr>
-                </tbody>
-                <tfoot>
-                  <tr>
-                    <td colspan="2"></td>
-                    <td>100.00</td>
-                  </tr>
-                </tfoot>
-              </table>
-            </div>
-
-            <h4>Alternate</h4>
-            <div class="table-wrapper">
-              <table class="alt">
-                <thead>
-                  <tr>
-                    <th>Name</th>
-                    <th>Description</th>
-                    <th>Price</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Item One</td>
-                    <td>Ante turpis integer aliquet porttitor.</td>
-                    <td>29.99</td>
-                  </tr>
-                  <tr>
-                    <td>Item Two</td>
-                    <td>Vis ac commodo adipiscing arcu aliquet.</td>
-                    <td>19.99</td>
-                  </tr>
-                  <tr>
-                    <td>Item Three</td>
-                    <td>Morbi faucibus arcu accumsan lorem.</td>
-                    <td>29.99</td>
-                  </tr>
-                  <tr>
-                    <td>Item Four</td>
-                    <td>Vitae integer tempus condimentum.</td>
-                    <td>19.99</td>
-                  </tr>
-                  <tr>
-                    <td>Item Five</td>
-                    <td>Ante turpis integer aliquet porttitor.</td>
-                    <td>29.99</td>
-                  </tr>
-                </tbody>
-                <tfoot>
-                  <tr>
-                    <td colspan="2"></td>
-                    <td>100.00</td>
-                  </tr>
-                </tfoot>
-              </table>
-            </div>
-          </section>
-
-          <section>
-            <h3 class="major">Form</h3>
-            <form method="post" action="#">
-              <div class="fields">
-                <div class="field half">
-                  <label for="demo-name">Ваше имя</label>
-                  <input type="text" name="demo-name" id="demo-name" value="" />
-                </div>
-                <div class="field half">
-                  <label for="demo-email">Email</label>
-                  <input
-                    type="email"
-                    name="demo-email"
-                    id="demo-email"
-                    value=""
-                    placeholder="jane@untitled.tld"
-                  />
-                </div>
-                <div class="field">
-                  <label for="demo-category">Category</label>
-                  <select name="demo-category" id="demo-category">
-                    <option value="">-</option>
-                    <option value="1">Manufacturing</option>
-                    <option value="1">Shipping</option>
-                    <option value="1">Administration</option>
-                    <option value="1">Human Resources</option>
-                  </select>
-                </div>
-                <div class="field">
-                  <label>Message</label>
-                  <textarea
-                    placeholder="Enter your message"
-                    rows="6"
-                  ></textarea>
-                </div>
-              </div>
-              <ul class="actions">
-                <li>
-                  <input type="submit" value="Send Message" class="primary" />
-                </li>
-                <li><input type="reset" value="Reset" /></li>
-              </ul>
-            </form>
-          </section>
         </article>
       </div>
 

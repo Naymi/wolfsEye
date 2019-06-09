@@ -1,0 +1,146 @@
+/* Скрытие скроллбара */
+html {
+  -ms-overflow-style: none; /* IE 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+::-webkit-scrollbar {
+  /* chrome based */
+  width: 0px; /* ширина scrollbar'a */
+
+  background: transparent; /* опционально */
+}
+/* Скрытие скроллбара */
+.body_slides {
+  z-index: -2;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  background: #000;
+}
+.body_slides,
+.body_slides:after {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+
+  width: 100%;
+  height: 100%;
+}
+.body_slides:after {
+  content: "";
+
+  background: transparent url(images/pattern.png) repeat top left;
+}
+
+.body_slides li {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  -moz-animation: anim_slides 24s linear infinite 0s;
+  -ms-animation: anim_slides 24s linear infinite 0s;
+  -o-animation: anim_slides 24s linear infinite 0s;
+  animation: anim_slides 24s linear infinite 0s;
+
+  opacity: 0;
+  background-repeat: none;
+  background-size: cover;
+}
+.body_slides li:nth-child(1) {
+  background-image: url("/images/backgorunds/1.jpg");
+  background-position: center;
+}
+.body_slides li:nth-child(2) {
+  animation-delay: 6s;
+
+  background-image: url("/images/backgorunds/2.jpg");
+  background-position: center;
+}
+.body_slides li:nth-child(3) {
+  -moz-animation-delay: 12s;
+  animation-delay: 12s;
+
+  background-image: url("/images/backgorunds/3.jpg");
+  background-position: center;
+}
+.body_slides li:nth-child(4) {
+  -moz-animation-delay: 18s;
+  animation-delay: 18s;
+
+  background-image: url("/images/backgorunds/4.jpg");
+  background-position: center;
+}
+@keyframes anim_slides {
+  0% {
+    opacity: 0;
+  }
+  6% {
+    opacity: 1;
+  }
+  24% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-moz-keyframes anim_slides {
+  0% {
+    opacity: 0;
+  }
+  6% {
+    opacity: 1;
+  }
+  24% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.map > * {
+  width: 100%;
+  max-width: 100%;
+}
+.map {
+  display: flex;
+  justify-content: center;
+
+  width: 100%;
+  max-width: 100%;
+}
+
+.persons {
+  display: grid;
+  justify-content: space-between;
+
+  grid-template-columns: repeat(auto-fit, 150px);
+}
+.person__img {
+  width: 100%;
+
+  border-radius: 4px;
+}
+.person__caption {
+  text-align: center;
+
+  font-size: 12px;
+}
+
+.videos,
+.videos * {
+  max-width: 100%;
+}
