@@ -127,7 +127,8 @@ html {
   display: grid;
   justify-content: space-between;
 
-  grid-template-columns: repeat(auto-fit, 150px);
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(150px, max-content));
 }
 .person__img {
   width: 100%;
